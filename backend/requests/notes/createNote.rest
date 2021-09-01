@@ -1,0 +1,7 @@
+POST http://localhost:4000/api/notes HTTP/1.1
+content-type: application/json
+
+{
+    "note": "prueba de nota 3, usuario peter parker",
+    "idUser": "612d95ec164ac6e6e2083df2"
+}

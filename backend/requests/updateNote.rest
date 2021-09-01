@@ -1,6 +1,0 @@
-PUT http://localhost:4000/api/notes/61290ebb26736c496af5d0a9  HTTP/1.1
-content-type: application/json
-
-{
-    "note": "Prueba de actualizacion de la nota teeeest"
-}

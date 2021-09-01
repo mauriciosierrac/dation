@@ -7,10 +7,10 @@ const Users = require('../../models/Users');
  * @param {*} res : retorna datos o mensajes via json
  */
 
-const getAllNotes = async (req, res) => {
+const getNotesByUser = async (req, res) => {
     try {
-
-        await Notes.find({}, function (err, notes) {
+        const idUser = req.params.id
+        await Notes.find({idUser: idUser}, function (err, notes) {
             Users.populate(notes, { path: 'idUser' }, function (err, notes) {
                 res.status(200).json(notes)
             })
@@ -19,4 +19,4 @@ const getAllNotes = async (req, res) => {
 }
 
 
-module.exports = getAllNotes
+module.exports = getNotesByUser
